@@ -1,0 +1,437 @@
+/* Lanceflows additions to the Sumolo template.
+   Only what the template has no style for; colours, fonts and spacing follow
+   the template (red #ed1e24, Poppins headings, Roboto body, #777 text). */
+
+/* ---- Wordmark (text in place of the template's logo image) ---- */
+.logo { width: auto; }
+.lf-brand { display: inline-flex; flex-direction: column; line-height: 1; }
+.lf-brand-name {
+  font-family: 'Poppins', sans-serif;
+  font-size: 32px;
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: -0.5px;
+}
+.lf-brand-name b { color: #ed1e24; font-weight: 700; }
+.lf-brand-tag {
+  margin-top: 6px;
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: #b2b2b2;
+}
+.call-box .text strong a { color: inherit; }
+/* the email is longer than the template's phone number: keep the box on one line */
+.call-box ul { display: flex; align-items: center; }
+.call-box strong { font-size: 15px; white-space: nowrap; }
+.copyright-wrap .lf-brand-name { font-size: 28px; }
+.copyright-wrap .lf-brand-name b { color: #2d2d2d; }
+.copyright-wrap .lf-foot-link { color: #fff; margin-left: 20px; }
+.copyright-wrap .lf-foot-link:hover { text-decoration: underline; }
+
+/* ---- Page title banner: Lanceflows eyebrow + intro text ---- */
+.breadcrumb-title .lf-crumb-eyebrow {
+  color: #fff;
+  font-size: 16px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+.breadcrumb-title h2 { overflow-wrap: anywhere; }
+.breadcrumb-title .lf-crumb-text {
+  color: #fff;
+  opacity: .85;
+  font-size: 17px;
+  line-height: 28px;
+  max-width: 780px;
+  margin: 0 auto;
+}
+/* Lanceflows titles and intros are longer than the template's one-word titles:
+   keep them clear of the breadcrumb pill at the bottom of the banner */
+.breadcrumb-area { padding-bottom: 90px; }
+@media (max-width: 991px) {
+  .breadcrumb-title h2 { font-size: 44px; }
+}
+@media (max-width: 575px) {
+  .breadcrumb-title h2 { font-size: 32px; }
+  .breadcrumb-title .lf-crumb-text { font-size: 15px; line-height: 24px; }
+}
+
+/* ---- Section intro paragraph under a section title ---- */
+.section-title .lf-lead { max-width: 780px; margin: 20px auto 0; }
+.section-title.left-align .lf-lead,
+.section-title.text-left .lf-lead { margin-left: 0; }
+
+/* ---- Counters without the template's video block above them ---- */
+/* the template pulls this band up over its video block (margin-top:-290px) */
+.counter-area.lf-counter-standalone { margin-top: 0; padding-top: 90px; }
+.counter .lf-count-suffix {
+  font-size: 50px;
+  font-weight: 700;
+  font-family: 'Poppins', sans-serif;
+  line-height: 1;
+  margin-left: -20px;
+  padding-right: 20px;
+}
+
+/* ---- Item titles inside template lists ---- */
+.lf-li-title {
+  display: block;
+  color: #222;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+.choose-area .choose-list li { align-items: flex-start; }
+/* the template's check list is white (it sits on a dark section); on light sections use body text colour */
+.about-area2 .about-content3 li { color: #777; margin-bottom: 18px; }
+
+/* ---- CTA band button ---- */
+.lf-btn-light,
+.lf-btn-light:hover {
+  background: #fff;
+  color: #ed1e24;
+  border-radius: 50px;
+  padding: 18px 40px;
+  font-weight: 600;
+}
+.lf-btn-light:hover { background: #222; color: #fff; }
+
+/* ---- Contact: "Prefer to talk live?" ---- */
+.lf-book-call { margin-top: 10px; }
+.lf-book-call h3 { font-size: 24px; margin-bottom: 10px; }
+.lf-book-call p { margin-bottom: 25px; }
+
+/* ---- Alternate light section background ---- */
+.lf-alt-bg { background: #f9f9f9; }
+
+/* ---- Case study cards ---- */
+.lf-case-card { width: 100%; }
+.lf-case-meta { display: flex; gap: 12px; align-items: center; margin-bottom: 12px; }
+.lf-case-num { font-family: 'Poppins', sans-serif; font-weight: 700; color: #ed1e24; }
+.lf-case-tag { font-size: 12px; letter-spacing: 1px; text-transform: uppercase; color: #9d9d9d; }
+.lf-case-domain { font-size: 13px; color: #9d9d9d; margin-bottom: 10px; }
+
+/* ---- Case study detail ---- */
+.lf-back-link { display: inline-block; margin-bottom: 20px; color: #ed1e24; font-weight: 600; }
+.lf-case h3 { margin: 40px 0 18px; font-size: 28px; }
+.lf-case h4 { margin: 10px 0 12px; font-size: 20px; }
+.lf-case ul.lf-x-list,
+.lf-case ul.lf-check-list { padding: 0; margin: 0 0 20px; list-style: none; }
+.lf-x-list li,
+.lf-check-list li { position: relative; padding-left: 28px; margin-bottom: 12px; }
+.lf-x-list li::before,
+.lf-check-list li::before {
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-family: "Font Awesome 5 Pro";
+  font-weight: 400;
+  color: #ed1e24;
+}
+.lf-x-list li::before { content: "\f00d"; }
+.lf-check-list li::before { content: "\f00c"; }
+.post__tag ul li span {
+  font-size: 12px;
+  text-transform: uppercase;
+  border: 2px solid #e5e5e5;
+  padding: 7px 10px;
+  display: inline-block;
+  border-radius: 3px;
+  color: #9d9d9d;
+  margin-bottom: 10px;
+}
+.widget_recent_entries .post-date { display: block; }
+.lf-flow ol { padding-left: 0; list-style: none; counter-reset: lfstep; }
+.lf-flow li {
+  counter-increment: lfstep;
+  position: relative;
+  padding: 0 0 18px 44px;
+  margin-bottom: 18px;
+  border-bottom: 1px solid #f0f0f0;
+}
+.lf-flow li::before {
+  content: counter(lfstep);
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  border-radius: 50%;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  color: #fff;
+  background: #ed1e24;
+}
+.lf-flow-before li::before { background: #2d2d2d; }
+.lf-flow li strong { display: block; color: #222; font-family: 'Poppins', sans-serif; }
+.lf-flow-meta { display: block; font-size: 13px; color: #9d9d9d; margin: 2px 0 6px; }
+.lf-flow li p { margin: 0; }
+.lf-bottleneck {
+  margin-left: 8px;
+  padding: 2px 8px;
+  border-radius: 3px;
+  font-size: 11px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #fff;
+  background: #ed1e24;
+  vertical-align: middle;
+}
+
+/* ---- Legal pages ---- */
+.lf-legal h2 { font-size: 28px; margin: 40px 0 16px; }
+.lf-legal h3 { font-size: 20px; margin: 24px 0 12px; }
+.lf-legal ul { padding-left: 22px; margin-bottom: 20px; list-style: disc; }
+.lf-legal li { margin-bottom: 8px; list-style: disc; }
+.lf-legal li strong { color: #222; }
+.lf-legal .updated { color: #9d9d9d; font-size: 14px; }
+.lf-legal .legal-note {
+  background: #f9f9f9;
+  border-left: 4px solid #ed1e24;
+  padding: 25px 30px;
+  margin: 20px 0 10px;
+}
+.lf-legal a { color: #ed1e24; }
+
+/* ---- Human verification gate (ported from Lanceflows) ---- */
+.vh-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 2147483647;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  background: #2d2d2d;
+  opacity: 1;
+  transition: opacity .45s ease;
+}
+.vh-overlay.vh-hide { opacity: 0; pointer-events: none; }
+.vh-card {
+  width: 100%;
+  max-width: 420px;
+  background: #fff;
+  border-radius: 10px;
+  padding: 34px 30px;
+  text-align: center;
+  box-shadow: 0 30px 80px -20px rgba(0, 0, 0, .55);
+}
+.vh-logo { margin: 0 auto 18px; }
+.vh-logo .lf-brand-name { color: #222; }
+.vh-card h2 { font-size: 24px; margin: 0 0 8px; }
+.vh-card p { font-size: 15px; margin: 0 0 24px; }
+.vh-turnstile { display: flex; justify-content: center; min-height: 65px; }
+.vh-error { color: #c0455f; font-size: 14px; margin: 14px 0 0; }
+.vh-foot { margin-top: 18px; font-size: 12px; color: #9d9d9d; }
+@media (prefers-reduced-motion: reduce) { .vh-overlay { transition: none; } }
+
+/* ---- Home slider: dark grey half-transparent cover over the background image ---- */
+/* sits above .image-layer (z 1, earlier in the DOM) and below the decorative lines (z 2-3) and text (z 9) */
+.slider-four .slider-bg::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: rgba(26, 25, 25, 0.7);
+  pointer-events: none;
+}
+
+/* ---- Home slider zoom: once per visit (see components/SliderZoomOnce.tsx) ---- */
+/* the template zooms each slide as it becomes active; instead zoom all slides together,
+   once, while the section is in view, so the picture keeps one size as slides fade */
+.slider-four .slider-bg.slick-active .image-layer { transform: scale(1); }
+.slider-four.lf-zoom .slider-bg .image-layer { transform: scale(1.15); }
+/* when the section is left, snap back without animating so the next visit starts fresh */
+.slider-four.lf-zoom-reset .image-layer { transition: none; }
+
+/* ---- Header: logo mark to the left of the wordmark ---- */
+.logo .lf-logo-link { display: inline-flex; align-items: center; gap: 12px; }
+.logo .lf-logo-mark { height: 46px; width: auto; flex-shrink: 0; }
+.logo .lf-brand-tag { white-space: nowrap; }
+/* phones: shrink the mark and wordmark so they stay clear of the menu button */
+@media (max-width: 575px) {
+  .logo .lf-logo-link { gap: 10px; }
+  .logo .lf-logo-mark { height: 36px; }
+  .logo .lf-brand-name { font-size: 26px; }
+  .logo .lf-brand-tag { font-size: 8px; letter-spacing: 1px; margin-top: 5px; }
+}
+/* very narrow phones: no room for the tagline beside the menu button */
+@media (max-width: 359px) {
+  .logo .lf-brand-tag { display: none; }
+}
+
+/* ---- Title banner with a photo (Breadcrumb `image` prop) ---- */
+/* isolation keeps the cover (z-index -1) above the photo and below the text and breadcrumb pill */
+.breadcrumb-area.lf-crumb-photo { background-position: center; isolation: isolate; }
+.breadcrumb-area.lf-crumb-photo::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: rgba(65, 62, 62, 0.7);
+}
+
+/* ---- Services: industry image cards (template blog card: .single-post2 / .blog-thumb2 / .blog-content2) ---- */
+.lf-industry-card {
+  width: 100%;
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0px 11px 16.15px 0.85px rgba(121, 121, 121, 0.07);
+  outline: 2px solid transparent;
+  transition: box-shadow .3s ease, transform .3s ease, outline-color .3s ease;
+}
+/* hover: lift + outline in a lighter tint of the template red (#ed1e24) */
+.lf-industry-card:hover { transform: translateY(-5px); box-shadow: 0 20px 40px rgba(0, 0, 0, .1); outline-color: #f4686c; }
+.lf-industry-card .blog-thumb2 img {
+  display: block;
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  transition: transform .6s ease;
+}
+.lf-industry-card:hover .blog-thumb2 img { transform: scale(1.08); }
+/* the template's red badge sits on the photo's bottom edge */
+.lf-industry-card .blog-content2 { padding: 35px 25px 25px; }
+.lf-industry-card .blog-content2 .date-home {
+  top: -18px;
+  left: 25px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+}
+.lf-industry-card .blog-content2 h4 { font-size: 20px; line-height: 1.3; margin-bottom: 12px; }
+.lf-industry-card .blog-content2 p { margin-bottom: 0; }
+
+/* ---- Services: technology stack boxes level, row by row ---- */
+#pricing .lf-tech-row > [class*="col-"] { display: flex; }
+#pricing .pricing-box { width: 100%; }
+/* the template drops the border on the highlighted box, which shifts its contents by 2px */
+#pricing .pricing-box2.active { border: 2px solid #f5f5f5; }
+
+/* ---- Tile grid: template service cards, all the same size (Services "What we provide") ---- */
+/* every tile the same size, across rows too: a grid with equal-height rows */
+.row.lf-tile-row { display: grid; grid-template-columns: 1fr; grid-auto-rows: 1fr; }
+@media (min-width: 768px) { .row.lf-tile-row { grid-template-columns: repeat(2, 1fr); } }
+@media (min-width: 992px) { .row.lf-tile-row { grid-template-columns: repeat(3, 1fr); } }
+.lf-tile-row > [class*="col-"] { display: flex; max-width: none; }
+.lf-tile-row .services-08-item { width: 100%; }
+
+
+/* ---- Services "What we provide": Font Awesome cloud icon (Cloud & DevOps), sized to match the template's line icons ---- */
+.services-08-thumb.glyph i.fal { font-size: 34px; line-height: 80px; }
+
+/* ---- Step layout (template "Our Few Simple Steps"): the side arrows only make sense with items side by side ---- */
+@media (max-width: 991px) {
+  .s-single-services .arrow { display: none; }
+}
+
+/* What you receive — illustrations differ in height (112–159px); give every
+   icon box the same height so the titles in a row line up. */
+.services-area .s-single-services .services-icon{height:160px;display:flex;align-items:flex-end;justify-content:center}
+
+/* Case Studies hero title: 2nd line starts under the "p" of "problems".
+   2.39em = width of "Real " in Poppins, so it scales with the responsive
+   font size. The block stays centred as a whole. */
+.lf-stagger { display: inline-block; text-align: left; font-size: min(1em, calc((100vw - 64px) / 10.4)); }
+/* (the whole block is ~10.3em wide, so it shrinks on phones to fit the screen) */
+.lf-stagger > span { display: block; white-space: nowrap; }
+.lf-stagger > span + span { padding-left: 2.39em; margin-top: .2em; }
+
+/* ===================== Case studies (redesign) ===================== */
+/* industry filter chips */
+.lf-case-filter { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; margin-bottom: 45px; }
+.lf-case-filter button {
+  border: 1px solid #e4e4e4; background: #fff; color: #222; border-radius: 30px;
+  padding: 9px 20px; font-family: 'Poppins', sans-serif; font-size: 14px; font-weight: 500;
+  cursor: pointer; transition: all .25s ease;
+}
+.lf-case-filter button span { color: #9d9d9d; font-size: 12px; margin-left: 4px; }
+.lf-case-filter button:hover { border-color: #f4686c; color: #ed1e24; }
+.lf-case-filter button.active { background: #ed1e24; border-color: #ed1e24; color: #fff; }
+.lf-case-filter button.active span { color: rgba(255, 255, 255, .8); }
+
+/* case card (built on the industry card) */
+.lf-case-card2 { display: flex; flex-direction: column; }
+.lf-case-card2 .blog-thumb2 { display: block; overflow: hidden; }
+.lf-case-card2 .blog-content2 { display: flex; flex-direction: column; flex: 1; position: relative; }
+.lf-case-card2 .lf-case-tag { display: block; margin-bottom: 8px; }
+.lf-case-card2 h4 a { color: #222; }
+.lf-case-card2 h4 a:hover { color: #ed1e24; }
+.lf-case-result { background: #fdf1f1; border-left: 3px solid #ed1e24; border-radius: 0 6px 6px 0; padding: 12px 15px; margin: 6px 0 20px; }
+.lf-case-result-label { display: block; font-size: 11px; letter-spacing: 1px; text-transform: uppercase; color: #ed1e24; font-weight: 600; margin-bottom: 4px; }
+.lf-case-result p { margin: 0; font-size: 14px; line-height: 1.6; color: #444; }
+.lf-case-foot { margin-top: auto; display: flex; justify-content: space-between; align-items: center; gap: 10px; border-top: 1px solid #eee; padding-top: 15px; }
+.lf-case-foot .lf-case-domain { margin: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.lf-case-more { color: #ed1e24; font-weight: 600; font-size: 14px; white-space: nowrap; }
+.lf-case-more i { margin-left: 4px; transition: transform .25s ease; }
+.lf-case-card2:hover .lf-case-more i { transform: translateX(4px); }
+
+/* detail: results at a glance */
+.lf-results-band { background: #f5f5f5; }
+.lf-results-head h5 { color: #ed1e24; font-size: 16px; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 25px; text-align: center; }
+.lf-result-tile {
+  width: 100%; background: #fff; border-radius: 10px; padding: 30px 28px; border-top: 3px solid #ed1e24;
+  box-shadow: 0px 11px 16.15px 0.85px rgba(121, 121, 121, 0.07);
+}
+.lf-result-tile i { font-size: 32px; color: #ed1e24; display: block; margin-bottom: 16px; }
+.lf-result-tile p { margin: 0; color: #222; font-family: 'Poppins', sans-serif; font-weight: 500; font-size: 17px; line-height: 1.55; }
+
+/* detail: mid-page call to action */
+.lf-mid-cta {
+  display: flex; align-items: center; justify-content: space-between; gap: 20px; flex-wrap: wrap;
+  background: #2d2d2d; border-radius: 10px; padding: 30px 35px; margin: 45px 0 10px;
+}
+.lf-mid-cta h4 { color: #fff; margin: 0 0 6px; }
+.lf-mid-cta p { color: #bdbdbd; margin: 0; }
+
+/* detail: testimonial */
+.lf-quote-card { position: relative; background: #f5f5f5; border-radius: 10px; padding: 45px 40px 35px; margin: 50px 0 0; }
+.lf-quote-mark { position: absolute; top: -22px; left: 40px; width: 46px; height: 46px; line-height: 46px; text-align: center; border-radius: 50%; background: #ed1e24; color: #fff; font-size: 18px; }
+.lf-quote-card blockquote { margin: 0 0 25px; padding: 0; border: 0; background: none; font-size: 19px; line-height: 1.7; color: #222; font-style: italic; }
+.lf-quote-card blockquote::before { display: none; }
+.lf-quote-card figcaption { display: flex; align-items: center; gap: 14px; }
+.lf-quote-avatar { width: 50px; height: 50px; line-height: 50px; border-radius: 50%; background: #2d2d2d; color: #fff; text-align: center; font-family: 'Poppins', sans-serif; font-weight: 600; flex-shrink: 0; }
+.lf-quote-card figcaption strong { display: block; color: #222; font-family: 'Poppins', sans-serif; }
+.lf-quote-card figcaption em { font-style: normal; color: #9d9d9d; font-size: 14px; }
+
+/* detail: sidebar */
+@media (min-width: 992px) { .lf-case-aside { position: sticky; top: 110px; } }
+.lf-snapshot dl { margin: 0; }
+.lf-snapshot dt { font-size: 12px; letter-spacing: 1px; text-transform: uppercase; color: #9d9d9d; font-weight: 500; margin-top: 16px; }
+.lf-snapshot dt:first-child { margin-top: 0; }
+.lf-snapshot dd { margin: 4px 0 0; color: #222; font-weight: 500; }
+.lf-snapshot dd a { color: #ed1e24; }
+.lf-stack ul { display: flex; flex-wrap: wrap; gap: 8px; padding: 0; margin: 0; list-style: none; }
+.lf-stack li { background: #f5f5f5; border-radius: 4px; padding: 6px 12px; font-size: 13px; color: #444; }
+.lf-aside-cta { background: #ed1e24 !important; border-radius: 10px; text-align: center; }
+.lf-aside-cta h3 { color: #fff; font-size: 22px; margin-bottom: 8px; }
+.lf-aside-cta p { color: rgba(255, 255, 255, .85); margin-bottom: 20px; }
+.lf-aside-cta .btn.ss-btn { background: #fff; color: #ed1e24; }
+.lf-aside-cta .btn.ss-btn:hover { background: #2d2d2d; color: #fff; }
+
+/* detail: previous / next */
+.lf-case-nav { display: flex; justify-content: space-between; gap: 30px; border-top: 1px solid #eee; margin-top: 40px; padding-top: 30px; }
+.lf-case-nav a { flex: 1; max-width: 48%; }
+.lf-case-nav span { display: block; font-size: 13px; color: #ed1e24; font-weight: 600; margin-bottom: 6px; }
+.lf-case-nav strong { display: block; color: #222; font-family: 'Poppins', sans-serif; font-size: 17px; line-height: 1.4; }
+.lf-case-nav a:hover strong { color: #ed1e24; }
+@media (max-width: 575px) {
+  .lf-case-nav { flex-direction: column; gap: 20px; }
+  .lf-case-nav a { max-width: none; }
+  .lf-case-nav a.text-right { text-align: left !important; }
+  .lf-mid-cta { padding: 25px; }
+  .lf-quote-card { padding: 40px 25px 28px; }
+}
+/* keep the hero's breadcrumb pill above a band that directly follows the hero */
+.breadcrumb-area.lf-crumb-photo { z-index: 2; }
+/* override template widget list + blockquote styles inside the case page */
+.sidebar-widget .widget.lf-stack li { display: inline-block; float: none; width: auto; border: 0; margin: 0; }
+.lf-quote-card blockquote { text-align: left; padding: 0 !important; }
+.lf-quote-card blockquote::after { display: none; }
+.lf-quote-card figcaption img.lf-quote-avatar.lf-quote-photo { display: block; width: 50px !important; max-width: 50px; height: 50px; object-fit: cover; padding: 0; margin: 0; background: #eee; }
